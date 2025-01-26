@@ -1,5 +1,9 @@
 #include "anywhy_flake.dtsi"
 
+&medium_transform {
+    col-offset = <1>;
+};
+
 &kscan0 {
     col-gpios
         = <&pro_micro 2 GPIO_ACTIVE_HIGH>
