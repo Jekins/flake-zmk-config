@@ -1,7 +1,7 @@
 #include "anywhy_flake.dtsi"
 
 &medium_transform {
-    col-offset = <1>;
+    col-offset = <-1>;
 };
 
 &kscan0 {
