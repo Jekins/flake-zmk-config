@@ -10,7 +10,7 @@
 
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &small_layout;
+        zmk,physical-layout = &medium_layout;
     };
 
     medium_layout: medium_layout {
