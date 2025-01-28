@@ -183,7 +183,7 @@
   &kp Q             &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U            &kp I              &kp O             &kp P
   &hml LCTRL A      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL SEMI
   &kp Z             &kp X            &kp C              &kp V        &kp B        &kp N      &kp M            &kp COMMA          &kp DOT           &kp SQT
-  &kp LEFT_BRACKET  &kp RBKT         &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt 1 switch_to_ru  &kp BACKSPACE      &kp LS(N6)  &kp LS(N7)
+  &kp LEFT_BRACKET  &kp RBKT         &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt 1 switch_to_ru  &kp BACKSPACE      &kp LS(NUMBER_6)  &kp LS(NUMBER_7)
             >;
         };
 
@@ -210,13 +210,13 @@
   &kp Q             &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U            &kp I              &kp O             &kp P
   &hml LCTRL A      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL SEMI
   &kp Z             &kp X            &kp C              &kp V        &kp B        &kp N      &kp M            &kp COMMA          &kp DOT           &kp SQT
-  &kp LEFT_BRACKET  &kp RBKT         &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt 4 switch_to_en  &kp BACKSPACE      &kp LS(N6)  &kp LS(N7)
+  &kp LEFT_BRACKET  &kp RBKT         &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt 4 switch_to_en  &kp BACKSPACE      &kp LS(NUMBER_6)  &kp LS(NUMBER_7)
             >;
         };
 
         sym_num_ru {
             bindings = <
-  &kp LA(N8)      &kp PIPE             &kp LA(N7)                &kp LA(N4)            &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8          &kp N9        &kp POUND
+  &kp LA(NUMBER_8)      &kp PIPE             &kp LA(NUMBER_7)                &kp LA(NUMBER_4)            &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8          &kp N9        &kp POUND
   &hml LCTRL EQUAL  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     &kp GRAVE     &kp N4  &kp N5          &kp N6        &kp N0
   &kp PLUS          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &kp AT        &kp N1  &kp N2          &kp N3        &kp CARET
   &kp C_VOL_DN      &kp C_VOL_UP         &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &soft_off     &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_CLR
