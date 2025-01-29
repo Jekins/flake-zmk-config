@@ -151,16 +151,100 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
         };
 
-        hml_ru: hml_ru {
+        hml_f: hml_f {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML_RU";
-            bindings = <&kp>, <&cstm_press>;
-            #binding-cells = <2>;
+            label = "HML_F";
+            bindings = <&kp>, <&ru_f>;
+            #binding-cells = <1>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 58 59 43 42 50 51 52 53 54>;
+        };
+
+        hml_bi: hml_bi {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_BI";
+            bindings = <&kp>, <&ru_bi>;
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 58 59 43 42 50 51 52 53 54>;
+        };
+
+        hml_v: hml_v {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_V";
+            bindings = <&kp>, <&ru_v>;
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 58 59 43 42 50 51 52 53 54>;
+        };
+
+        hml_a: hml_a {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_A";
+            bindings = <&kp>, <&ru_a>;
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 58 59 43 42 50 51 52 53 54>;
+        };
+
+        hmr_o: hmr_o {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_O";
+            bindings = <&kp>, <&ru_o>;
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
+        };
+
+        hmr_l: hmr_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_L";
+            bindings = <&kp>, <&ru_l>;
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
+        };
+
+        hmr_d: hmr_d {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_D";
+            bindings = <&kp>, <&ru_d>;
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
+        };
+
+        hmr_zh: hmr_zh {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_ZH";
+            bindings = <&kp>, <&ru_zh>;
+            #binding-cells = <1>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
         };
 
         lt_tg: lt_tg {
@@ -234,7 +318,7 @@
         base_ru {
             bindings = <
   &ru_y             &ru_ts                   &ru_u                       &ru_k                &ru_ye       &ru_n       &ru_g              &ru_sh                  &ru_shch              &ru_z
-  &hml_ru LCTRL ru_f   &hml_ru LEFT_ALT ru_bi      &hml_ru LEFT_SHIFT ru_v        &hml_ru LGUI ru_a       &ru_p        &ru_r       &hmr_ru LGUI ru_o     &hmr_ru LEFT_SHIFT ru_l    &hmr_ru LEFT_ALT ru_d    &hmr_ru LCTRL ru_zh
+  &hml_f LCTRL   &hml_bi LEFT_ALT      &hml_v LEFT_SHIFT ru_a        &hml_a LGUI ru_o       &ru_p        &ru_r       &hmr_o LGUI ru_l     &hmr_l LEFT_SHIFT ru_d    &hmr_d LEFT_ALT ru_zh    &hmr_zh LCTRL ru_bi
   &ru_ya            &ru_ch                   &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
   &kp C_VOL_DN      &kp C_VOL_UP             &kp ESCAPE                  &lt 3 TAB            &kp SPACE    &kp ENTER   &lt_tg 2 0         &kp BACKSPACE           &ru_kh                &ru_hard
             >;
