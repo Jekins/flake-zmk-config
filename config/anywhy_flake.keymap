@@ -139,8 +139,6 @@
             bindings = <&macro_param_1to1>;
         };
 
-        // 2) Новые hold-tap для русских символов
-        //    – подменяем вторую «ветку» (tap) на cstm_press
         hmr_ru: hmr_ru {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR_RU";
