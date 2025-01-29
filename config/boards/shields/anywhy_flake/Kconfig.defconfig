@@ -16,4 +16,7 @@ if SHIELD_ANYWHY_FLAKE_LEFT || SHIELD_ANYWHY_FLAKE_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_CUSTOM_BEHAVIORS
+    default y
+
 endif
