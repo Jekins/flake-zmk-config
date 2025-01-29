@@ -132,25 +132,6 @@
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 58 59 43 42 50 51 52 53 54>;
         };
 
-        cstm_press: cstm_press {
-            compatible = "zmk,behavior-macro-one-param";
-            label = "CSTM_PRESS";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1>;
-        };
-
-        hmr_ru: hmr_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR_RU";
-            bindings = <&kp>, <&cstm_press>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
-        };
-
         hml_f: hml_f {
             compatible = "zmk,behavior-hold-tap";
             label = "HML_F";
