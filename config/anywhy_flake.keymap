@@ -299,7 +299,7 @@
         base_ru {
             bindings = <
   &ru_y             &ru_ts                   &ru_u                       &ru_k                &ru_ye       &ru_n       &ru_g              &ru_sh                  &ru_shch              &ru_z
-  &hml_f LCTRL   &hml_bi LEFT_ALT      &hml_v LEFT_SHIFT ru_a        &hml_a LGUI ru_o       &ru_p        &ru_r       &hmr_o LGUI ru_l     &hmr_l LEFT_SHIFT ru_d    &hmr_d LEFT_ALT ru_zh    &hmr_zh LCTRL ru_bi
+  &hml_f LCTRL   &hml_bi LEFT_ALT      &hml_v LEFT_SHIFT        &hml_a LGUI       &ru_p        &ru_r       &hmr_o LGUI     &hmr_r LEFT_SHIFT    &hmr_d LEFT_ALT    &hmr_zh LCTRL
   &ru_ya            &ru_ch                   &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
   &kp C_VOL_DN      &kp C_VOL_UP             &kp ESCAPE                  &lt 3 TAB            &kp SPACE    &kp ENTER   &lt_tg 2 0         &kp BACKSPACE           &ru_kh                &ru_hard
             >;
