@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define HOST_OS 2
+#include "zmk-helpers.h"
+
+ZMK_UNICODE_SINGLE(dollar_sign, N0, N0, N2, N4)
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -189,7 +194,7 @@
 
         sym_num {
             bindings = <
-  &kp ASTERISK      &kp PIPE             &kp AMPERSAND                &unicode 0x0024       &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8          &kp N9        &kp POUND
+  &kp ASTERISK      &kp PIPE             &kp AMPERSAND                &dollar_sign          &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8          &kp N9        &kp POUND
   &hml LCTRL EQUAL  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     &kp GRAVE     &kp N4  &kp N5          &kp N6        &kp N0
   &kp PLUS          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &kp AT        &kp N1  &kp N2          &kp N3        &kp CARET
   &kp C_VOL_DN      &kp C_VOL_UP         &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &soft_off     &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_CLR
