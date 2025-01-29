@@ -141,7 +141,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&tog>;
+            bindings = <&mo>, <&to>;
         };
 
         bt0: bt0 {
