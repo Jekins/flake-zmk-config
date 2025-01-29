@@ -112,7 +112,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
@@ -125,7 +124,30 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
             bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57 58 59 43 42 50 51 52 53 54>;
+        };
 
+        hmr_ru: hmr_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_RU";
+            bindings = <&kp>, <&none>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54 55 56 57 58 59 43>;
+        };
+
+        hml_ru: hml_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_RU";
+            bindings = <&kp>, <&none>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
@@ -198,14 +220,14 @@
   &kp Q             &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U            &kp I              &kp O             &kp P
   &hml LCTRL A      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL POUND
   &kp Z             &kp X            &kp C              &kp V        &kp B        &kp N      &kp M            &kp COMMA          &kp DOT           &kp SQT
-  &kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 3 TAB    &kp SPACE    &kp ENTER  &lt_tg 2 1          &kp BACKSPACE      &none             &none
+  &kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 3 TAB    &kp SPACE    &kp ENTER  &lt_tg 2 1       &kp BACKSPACE      &none             &none
             >;
         };
 
         base_ru {
             bindings = <
   &ru_y             &ru_ts                   &ru_u                       &ru_k                &ru_ye       &ru_n       &ru_g              &ru_sh                  &ru_shch              &ru_z
-  &hml LCTRL ru_f   &hml LEFT_ALT ru_bi      &hml LEFT_SHIFT ru_v        &hml LGUI ru_a       &ru_p        &ru_r       &hmr LGUI ru_o     &hmr LEFT_SHIFT ru_l    &hmr LEFT_ALT ru_d    &hmr LCTRL ru_zh
+  &hml_ru LCTRL ru_f   &hml_ru LEFT_ALT ru_bi      &hml_ru LEFT_SHIFT ru_v        &hml_ru LGUI ru_a       &ru_p        &ru_r       &hmr_ru LGUI ru_o     &hmr_ru LEFT_SHIFT ru_l    &hmr_ru LEFT_ALT ru_d    &hmr_ru LCTRL ru_zh
   &ru_ya            &ru_ch                   &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
   &kp C_VOL_DN      &kp C_VOL_UP             &kp ESCAPE                  &lt 3 TAB            &kp SPACE    &kp ENTER   &lt_tg 2 0         &kp BACKSPACE           &ru_kh                &ru_hard
             >;
