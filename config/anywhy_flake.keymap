@@ -197,8 +197,8 @@ ZMK_UNICODE_SINGLE(dollar_sign, N0, N0, N2, N4)
         base_ru {
             bindings = <
   &ru_y             &ru_ts                   &ru_u                       &ru_k                &ru_ye       &ru_n       &ru_g              &ru_sh                  &ru_shch              &ru_z
-  &hml LCTRL &ru_f  &hml LEFT_ALT &ru_bi     &hml LEFT_SHIFT &ru_v       &hml LGUI &ru_a      &ru_p        &ru_r       &hmr LGUI &ru_o    &hmr LEFT_SHIFT &ru_l   &hmr LEFT_ALT &ru_d   &hmr LCTRL &ru_zhe
-  &ru_ya            &ru_che                  &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
+  &hml LCTRL &ru_f  &hml LEFT_ALT &ru_bi     &hml LEFT_SHIFT &ru_v       &hml LGUI &ru_a      &ru_p        &ru_r       &hmr LGUI &ru_o    &hmr LEFT_SHIFT &ru_l   &hmr LEFT_ALT &ru_d   &hmr LCTRL &ru_zh
+  &ru_ya            &ru_ch                   &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
   &kp C_VOL_DN      &kp C_VOL_UP             &kp ESCAPE                  &lt 2 TAB            &kp SPACE    &kp ENTER   &lt 2 0            &kp BACKSPACE           &ru_kh                &ru_hard
             >;
         };
