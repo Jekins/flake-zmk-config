@@ -186,9 +186,34 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
                 = <&kp LG(SPACE)>, // Сначала выполняется LG(SPACE)
                   <&mo 1>;              // Затем активируется слой 1
         };
+
+        layer_tap_lang: layer_tap_lang {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            label = "LAYER_TAP_LANG";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = 
+                <&macro_press>,
+                <&kp LG(SPACE)>,
+                <&macro_release>,
+                <&kp LG(SPACE)>,
+                <&macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>;
+        };
     };
 
     behaviors {
+        lt_lang: layer_tap_with_lang {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_WITH_LANG";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&layer_tap_lang>, <&kp>;
+        };
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
@@ -278,7 +303,7 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
   &kp Q             &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U            &kp I              &kp O             &kp P
   &hml LCTRL A      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL POUND
   &kp Z             &kp X            &kp C              &kp V        &kp B        &kp N      &kp M            &kp COMMA          &kp DOT           &kp SQT
-  &kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt 1 LG(SPACE)  &kp BACKSPACE      &none             &none
+  &kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &&lt_lang 1 LG(SPACE)  &kp BACKSPACE      &none             &none
             >;
         };
 
