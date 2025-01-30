@@ -189,11 +189,9 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
     };
 
     behaviors {
-        behaviors {
-            lg_space_layer_behavior: behavior_lg_space_layer {
-                compatible = "custom,behavior-lg-space-layer";
-                #binding-cells = <0>;
-            };
+        lg_space_layer_behavior: behavior_lg_space_layer {
+            compatible = "custom,behavior-lg-space-layer";
+            #binding-cells = <0>;
         };
 
         hmr: hmr {
