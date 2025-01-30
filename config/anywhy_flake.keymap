@@ -204,7 +204,11 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
-                <&mo MACRO_PLACEHOLDER>;
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&kp LG(SPACE)>,
+                <&macro_release>,
+                <&kp LG(SPACE)>;
         };
     };
 
