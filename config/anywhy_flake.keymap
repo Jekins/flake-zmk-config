@@ -123,7 +123,6 @@ MAKE_HRM(hmrr, &kp, &kp, KEYS_L THUMBS)
     };
 
     behaviors {
-
         hml: hml {hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
@@ -219,7 +218,7 @@ MAKE_HRM(hmrr, &kp, &kp, KEYS_L THUMBS)
         base_ru {
             bindings = <
   &ru_y             &ru_ts                   &ru_u                       &ru_k                &ru_ye       &ru_n       &ru_g              &ru_sh                  &ru_shch              &ru_z
-  &hmll LCTRL F      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL POUND
+  &hml LCTRL F      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL POUND
   &ru_ya            &ru_ch                   &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
   &kp C_VOL_DN      &kp C_VOL_UP             &kp ESCAPE                  &lt 3 TAB            &kp SPACE    &kp ENTER   &lt_tg 2 0         &kp BACKSPACE           &ru_kh                &ru_hard
             >;
