@@ -135,6 +135,59 @@
                 <&kp N3>,
                 <&macro_release>,
                 <&kp LCTRL &kp LALT>;
+
+                /*
+                Hammerspoon script:
+                local previousLayout = nil
+
+                function switchToInputSource(layoutName)
+                    local currentLayout = hs.keycodes.currentLayout()
+
+                    if currentLayout == layoutName then
+                        return
+                    end
+
+                    local availableLayouts = hs.keycodes.layouts()
+
+                    for _, layout in ipairs(availableLayouts) do
+                        if layout == layoutName then
+                            previousLayout = currentLayout
+                            hs.keycodes.setLayout(layoutName)
+                            return
+                        end
+                    end
+                end
+
+                function switchToPreviousLayout()
+                    if previousLayout == nil then
+                        return
+                    end
+
+                    local availableLayouts = hs.keycodes.layouts()
+
+                    for _, layout in ipairs(availableLayouts) do
+                        if layout == previousLayout then
+                            hs.keycodes.setLayout(previousLayout)
+                            previousLayout = nil
+                            return
+                        end
+                    end
+
+                    previousLayout = nil
+                end
+
+                hs.hotkey.bind({"ctrl", "alt"}, "1", function()
+                    switchToInputSource("ABC")
+                end)
+
+                hs.hotkey.bind({"ctrl", "alt"}, "2", function()
+                    switchToInputSource("Russian")
+                end)
+
+                hs.hotkey.bind({"ctrl", "alt"}, "3", function()
+                    switchToPreviousLayout()
+                end)
+                */
         };
     };
 
@@ -237,7 +290,7 @@
 &kp Q             &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U                 &kp I              &kp O             &kp P
 &hml LCTRL A      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J           &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL SEMI
 &kp Z             &kp X            &kp C              &kp V        &kp B        &kp N      &kp M                 &kp COMMA          &kp DOT           &kp SQT
-&kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt_lang 1 LG(SPACE)  &kp BACKSPACE      &kp C_PP          &kp C_NEXT_TRACK
+&kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt_lang 1 LG(SPACE)  &kp BACKSPACE      &kp C_PP          &kp C_NEXT
             >;
         };
 
