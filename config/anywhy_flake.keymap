@@ -5,7 +5,6 @@
 #define HOST_OS 2
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/4x12.h"
-#include "zmk-helpers/unicode-chars/russian.dtsi"
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
@@ -21,61 +20,6 @@
 
 MAKE_HRM(hmll, &kp, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmrr, &kp, &kp, KEYS_L THUMBS)
-
-// Тильда и обратная кавычка
-ZMK_UNICODE_SINGLE(u_backtick,    N0, N0, N6, N0) // ` (U+0060)
-//ZMK_UNICODE_SINGLE(u_tilde,       N0, N0, N7, E) // ~ (U+007E)
-
-// Символы над цифрами (с Shift)
-// ZMK_UNICODE_SINGLE(u_exclamation, KC_0, KC_0, KC_2, KC_1) // ! (U+0021)
-// ZMK_UNICODE_SINGLE(u_at_sign,     KC_0, KC_0, KC_4, KC_0) // @ (U+0040)
-// ZMK_UNICODE_SINGLE(u_hash_sign,   KC_0, KC_0, KC_2, KC_3) // # (U+0023)
-// ZMK_UNICODE_SINGLE(u_dollar,      KC_0, KC_0, KC_2, KC_4) // $ (U+0024)
-// ZMK_UNICODE_SINGLE(u_percent,     KC_0, KC_0, KC_2, KC_5) // % (U+0025)
-// ZMK_UNICODE_SINGLE(u_caret,       KC_0, KC_0, KC_5, KC_E) // ^ (U+005E)
-// ZMK_UNICODE_SINGLE(u_ampersand,   KC_0, KC_0, KC_2, KC_6) // & (U+0026)
-ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
-// ZMK_UNICODE_SINGLE(u_left_paren,  KC_0, KC_0, KC_2, KC_8) // ( (U+0028)
-// ZMK_UNICODE_SINGLE(u_right_paren, KC_0, KC_0, KC_2, KC_9) // ) (U+0029)
-
-// Знаки «-» и «_»
-// ZMK_UNICODE_SINGLE(u_minus,       KC_0, KC_0, KC_2, KC_D) // - (U+002D)
-// ZMK_UNICODE_SINGLE(u_underscore,  KC_0, KC_0, KC_5, KC_F) // _ (U+005F)
-
-// Знаки «=» и «+»
-// ZMK_UNICODE_SINGLE(u_equal,       KC_0, KC_0, KC_3, KC_D) // = (U+003D)
-// ZMK_UNICODE_SINGLE(u_plus,        KC_0, KC_0, KC_2, KC_B) // + (U+002B)
-
-// Скобки и обратная черта
-// ZMK_UNICODE_SINGLE(u_left_bracket, KC_0, KC_0, KC_5, KC_B) // [ (U+005B)
-// ZMK_UNICODE_SINGLE(u_left_curly,  KC_0, KC_0, KC_7, KC_B) // { (U+007B)
-// ZMK_UNICODE_SINGLE(u_right_bracket, KC_0, KC_0, KC_5, KC_D) // ] (U+005D)
-// ZMK_UNICODE_SINGLE(u_right_curly, KC_0, KC_0, KC_7, KC_D) // } (U+007D)
-// ZMK_UNICODE_SINGLE(u_backslash,   KC_0, KC_0, KC_5, KC_C) // \ (U+005C)
-// ZMK_UNICODE_SINGLE(u_vertical_bar, KC_0, KC_0, KC_7, KC_C) // | (U+007C)
-
-// Точка с запятой и двоеточие
-// ZMK_UNICODE_SINGLE(u_semicolon,   KC_0, KC_0, KC_3, KC_B) // ; (U+003B)
-// ZMK_UNICODE_SINGLE(u_colon,       KC_0, KC_0, KC_3, KC_A) // : (U+003A)
-
-// Апостроф и кавычки
-// ZMK_UNICODE_SINGLE(u_apostrophe,  KC_0, KC_0, KC_2, KC_7) // ' (U+0027)
-// ZMK_UNICODE_SINGLE(u_quotation,   KC_0, KC_0, KC_2, KC_2) // " (U+0022)
-
-// Запятая и знак меньше
-// ZMK_UNICODE_SINGLE(u_comma,       KC_0, KC_0, KC_2, KC_C) // , (U+002C)
-// ZMK_UNICODE_SINGLE(u_less_than,   KC_0, KC_0, KC_3, KC_C) // < (U+003C)
-
-// Точка и знак больше
-// ZMK_UNICODE_SINGLE(u_period,      KC_0, KC_0, KC_2, KC_E) // . (U+002E)
-// ZMK_UNICODE_SINGLE(u_greater_than, KC_0, KC_0, KC_3, KC_E) // > (U+003E)
-
-// Слеш и вопросительный знак
-// ZMK_UNICODE_SINGLE(u_slash,       KC_0, KC_0, KC_2, KC_F) // / (U+002F)
-// ZMK_UNICODE_SINGLE(u_question,    KC_0, KC_0, KC_3, KC_F) // ? (U+003F)
-
-// Пробел
-// ZMK_UNICODE_SINGLE(u_space,       KC_0, KC_0, KC_2, KC_0) // (пробел) (U+0020)
 
 / {
     combos {
@@ -176,17 +120,6 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
             label = "BT_CLR_4";
         };
 
-        macro_lg_spc_layer: macro_lg_spc_layer_seq {
-            label = "MACRO_LG_SPACE_LAYER";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings 
-                = <&kp LG(SPACE)>, // Сначала выполняется LG(SPACE)
-                  <&mo 1>;              // Затем активируется слой 1
-        };
-
         layer_tap_lang: layer_tap_lang {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -194,10 +127,15 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
             wait-ms = <0>;
             tap-ms = <0>;
             bindings = 
+                // Ctrl+Alt+1
                 <&macro_press>,
-                <&kp LG(SPACE)>,
+                <&kp LCTRL &kp LALT>,
+                <&macro_tap>,
+                <&kp N1>,
                 <&macro_release>,
-                <&kp LG(SPACE)>,
+                <&kp LCTRL &kp LALT>,
+                
+                // Активация слоя
                 <&macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
@@ -205,10 +143,14 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
                 <&macro_param_1to1>,
                 <&macro_release>,
                 <&mo MACRO_PLACEHOLDER>,
+                
+                // Ctrl+Alt+3
                 <&macro_press>,
-                <&kp LG(SPACE)>,
+                <&kp LCTRL &kp LALT>,
+                <&macro_tap>,
+                <&kp N3>,
                 <&macro_release>,
-                <&kp LG(SPACE)>;
+                <&kp LCTRL &kp LALT>;
         };
     };
 
@@ -319,8 +261,8 @@ ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
             bindings = <
   &kp EQUAL         &kp PIPE             &kp AMPERSAND                &kp DOLLAR            &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8          &kp N9        &kp AT
   &hml LCTRL COLON  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     &kp COMMA     &kp N4  &kp N5          &kp N6        &kp DOT
-  &kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &u_backtick   &kp N1  &kp N2          &kp N3        &kp N0
-  &u_asterisk       &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &soft_off     &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_CLR
+  &kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &kp BACKTICK   &kp N1  &kp N2          &kp N3        &kp N0
+  &kp ASTERISK      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &soft_off     &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_CLR
             >;
         };
 
