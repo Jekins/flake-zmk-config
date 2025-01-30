@@ -136,7 +136,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML_F";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&ru_f>;
+            bindings = <&kp LCTRL &ru_f>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -148,7 +148,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML_BI";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&ru_bi>;
+            bindings = <&kp LEFT_ALT &ru_bi>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -160,7 +160,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML_V";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&ru_v>;
+            bindings = <&kp LEFT_SHIFT &ru_v>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -172,7 +172,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML_A";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&ru_a>;
+            bindings = <&kp LGUI &ru_a>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -184,7 +184,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR_O";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&ru_o>;
+            bindings = <&kp LGUI &ru_o>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -196,7 +196,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR_L";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&ru_l>;
+            bindings = <&kp LEFT_SHIFT &ru_l>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -208,7 +208,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR_D";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&ru_d>;
+            bindings = <&kp LEFT_ALT &ru_d>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -220,7 +220,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR_ZH";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&ru_zh>;
+            bindings = <&kp LCTRL &ru_zh>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "balanced";
@@ -299,7 +299,7 @@
         base_ru {
             bindings = <
   &ru_y             &ru_ts                   &ru_u                       &ru_k                &ru_ye       &ru_n       &ru_g              &ru_sh                  &ru_shch              &ru_z
-  &hml_f       &hml_bi             &hml_v               &hml_a           &ru_p        &ru_r       &hmr_o         &hmr_l           &hmr_d            &hmr_zh 
+  &hml_f            &hml_bi                  &hml_v                      &hml_a               &ru_p        &ru_r       &hmr_o             &hmr_l                  &hmr_d                &hmr_zh 
   &ru_ya            &ru_ch                   &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
   &kp C_VOL_DN      &kp C_VOL_UP             &kp ESCAPE                  &lt 3 TAB            &kp SPACE    &kp ENTER   &lt_tg 2 0         &kp BACKSPACE           &ru_kh                &ru_hard
             >;
