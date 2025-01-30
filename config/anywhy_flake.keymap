@@ -22,6 +22,61 @@
 MAKE_HRM(hmll, &kp, &kp, KEYS_R THUMBS)
 MAKE_HRM(hmrr, &kp, &kp, KEYS_L THUMBS)
 
+// Тильда и обратная кавычка
+ZMK_UNICODE_SINGLE(u_backtick,    N0, N0, N6, N0) // ` (U+0060)
+//ZMK_UNICODE_SINGLE(u_tilde,       N0, N0, N7, E) // ~ (U+007E)
+
+// Символы над цифрами (с Shift)
+// ZMK_UNICODE_SINGLE(u_exclamation, KC_0, KC_0, KC_2, KC_1) // ! (U+0021)
+// ZMK_UNICODE_SINGLE(u_at_sign,     KC_0, KC_0, KC_4, KC_0) // @ (U+0040)
+// ZMK_UNICODE_SINGLE(u_hash_sign,   KC_0, KC_0, KC_2, KC_3) // # (U+0023)
+// ZMK_UNICODE_SINGLE(u_dollar,      KC_0, KC_0, KC_2, KC_4) // $ (U+0024)
+// ZMK_UNICODE_SINGLE(u_percent,     KC_0, KC_0, KC_2, KC_5) // % (U+0025)
+// ZMK_UNICODE_SINGLE(u_caret,       KC_0, KC_0, KC_5, KC_E) // ^ (U+005E)
+// ZMK_UNICODE_SINGLE(u_ampersand,   KC_0, KC_0, KC_2, KC_6) // & (U+0026)
+ZMK_UNICODE_SINGLE(u_asterisk,    N0, N0, N2, A) // * (U+002A)
+// ZMK_UNICODE_SINGLE(u_left_paren,  KC_0, KC_0, KC_2, KC_8) // ( (U+0028)
+// ZMK_UNICODE_SINGLE(u_right_paren, KC_0, KC_0, KC_2, KC_9) // ) (U+0029)
+
+// Знаки «-» и «_»
+// ZMK_UNICODE_SINGLE(u_minus,       KC_0, KC_0, KC_2, KC_D) // - (U+002D)
+// ZMK_UNICODE_SINGLE(u_underscore,  KC_0, KC_0, KC_5, KC_F) // _ (U+005F)
+
+// Знаки «=» и «+»
+// ZMK_UNICODE_SINGLE(u_equal,       KC_0, KC_0, KC_3, KC_D) // = (U+003D)
+// ZMK_UNICODE_SINGLE(u_plus,        KC_0, KC_0, KC_2, KC_B) // + (U+002B)
+
+// Скобки и обратная черта
+// ZMK_UNICODE_SINGLE(u_left_bracket, KC_0, KC_0, KC_5, KC_B) // [ (U+005B)
+// ZMK_UNICODE_SINGLE(u_left_curly,  KC_0, KC_0, KC_7, KC_B) // { (U+007B)
+// ZMK_UNICODE_SINGLE(u_right_bracket, KC_0, KC_0, KC_5, KC_D) // ] (U+005D)
+// ZMK_UNICODE_SINGLE(u_right_curly, KC_0, KC_0, KC_7, KC_D) // } (U+007D)
+// ZMK_UNICODE_SINGLE(u_backslash,   KC_0, KC_0, KC_5, KC_C) // \ (U+005C)
+// ZMK_UNICODE_SINGLE(u_vertical_bar, KC_0, KC_0, KC_7, KC_C) // | (U+007C)
+
+// Точка с запятой и двоеточие
+// ZMK_UNICODE_SINGLE(u_semicolon,   KC_0, KC_0, KC_3, KC_B) // ; (U+003B)
+// ZMK_UNICODE_SINGLE(u_colon,       KC_0, KC_0, KC_3, KC_A) // : (U+003A)
+
+// Апостроф и кавычки
+// ZMK_UNICODE_SINGLE(u_apostrophe,  KC_0, KC_0, KC_2, KC_7) // ' (U+0027)
+// ZMK_UNICODE_SINGLE(u_quotation,   KC_0, KC_0, KC_2, KC_2) // " (U+0022)
+
+// Запятая и знак меньше
+// ZMK_UNICODE_SINGLE(u_comma,       KC_0, KC_0, KC_2, KC_C) // , (U+002C)
+// ZMK_UNICODE_SINGLE(u_less_than,   KC_0, KC_0, KC_3, KC_C) // < (U+003C)
+
+// Точка и знак больше
+// ZMK_UNICODE_SINGLE(u_period,      KC_0, KC_0, KC_2, KC_E) // . (U+002E)
+// ZMK_UNICODE_SINGLE(u_greater_than, KC_0, KC_0, KC_3, KC_E) // > (U+003E)
+
+// Слеш и вопросительный знак
+// ZMK_UNICODE_SINGLE(u_slash,       KC_0, KC_0, KC_2, KC_F) // / (U+002F)
+// ZMK_UNICODE_SINGLE(u_question,    KC_0, KC_0, KC_3, KC_F) // ? (U+003F)
+
+// Пробел
+// ZMK_UNICODE_SINGLE(u_space,       KC_0, KC_0, KC_2, KC_0) // (пробел) (U+0020)
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -211,16 +266,7 @@ MAKE_HRM(hmrr, &kp, &kp, KEYS_L THUMBS)
   &kp Q             &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U            &kp I              &kp O             &kp P
   &hml LCTRL A      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL POUND
   &kp Z             &kp X            &kp C              &kp V        &kp B        &kp N      &kp M            &kp COMMA          &kp DOT           &kp SQT
-  &kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 3 TAB    &kp SPACE    &kp ENTER  &lt_tg 2 1       &kp BACKSPACE      &none             &none
-            >;
-        };
-
-        base_ru {
-            bindings = <
-  &ru_y             &ru_ts                   &ru_u                       &ru_k                &ru_ye       &ru_n       &ru_g              &ru_sh                  &ru_shch              &ru_z
-  &hmll LCTRL F      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J      &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL POUND
-  &ru_ya            &ru_ch                   &ru_s                       &ru_m                &ru_i        &ru_t       &ru_soft           &ru_b                   &ru_yu                &ru_e
-  &kp C_VOL_DN      &kp C_VOL_UP             &kp ESCAPE                  &lt 3 TAB            &kp SPACE    &kp ENTER   &lt_tg 2 0         &kp BACKSPACE           &ru_kh                &ru_hard
+  &kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt_tg 2 1       &kp BACKSPACE      &none             &none
             >;
         };
 
@@ -228,8 +274,8 @@ MAKE_HRM(hmrr, &kp, &kp, KEYS_L THUMBS)
             bindings = <
   &kp EQUAL         &kp PIPE             &kp AMPERSAND                &kp DOLLAR            &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8          &kp N9        &kp AT
   &hml LCTRL COLON  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     &kp COMMA     &kp N4  &kp N5          &kp N6        &kp DOT
-  &kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &kp GRAVE     &kp N1  &kp N2          &kp N3        &kp N0
-  &kp ASTERISK      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &soft_off     &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_CLR
+  &kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &u_backtick   &kp N1  &kp N2          &kp N3        &kp N0
+  &u_asterisk      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &soft_off     &trans  &studio_unlock  &bt BT_SEL 0  &bt BT_CLR
             >;
         };
 
