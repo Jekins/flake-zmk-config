@@ -314,7 +314,7 @@
 &kp QUESTION  &kp N7  &kp N8          &kp N9        &kp SQT     &kp EQUAL         &kp PIPE             &kp AMPERSAND                &kp DOLLAR            &kp EXCLAMATION      
 &kp COMMA     &kp N4  &kp N5          &kp N6        &kp DOT     &hml LCTRL COLON  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     
 &kp GRAVE     &kp N1  &kp N2          &kp N3        &kp N0      &kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    
-&soft_off     &trans  &kp AT          &bt BT_SEL 0  &bt BT_CLR  &kp ASTERISK      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE      
+&soft_off     &kp ENTER  &kp AT          &bt BT_SEL 0  &bt BT_CLR  &kp ASTERISK      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE      
             >;
         };
     };
