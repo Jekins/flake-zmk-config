@@ -50,20 +50,14 @@
             compatible = "zmk,behavior-macro";
             label = "SWITCH_TO_RU";
             #binding-cells = <0>;
-            bindings = <
-                &tog 3
-                &kp LG(SPACE)
-            >;
+            bindings = <&tog 3 &kp LG(SPACE)>;
         };
 
         switch_to_en: switch_to_en {
             compatible = "zmk,behavior-macro";
             label = "SWITCH_TO_EN";
             #binding-cells = <0>;
-            bindings = <
-                &tog 0
-                &kp LG(SPACE)
-            >;
+            bindings = <&tog 0 &kp LG(SPACE)>;
         };
 
         bt_clr_0: bt_clr_0 {
@@ -107,25 +101,19 @@
             label = "LAYER_TAP_LANG";
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = 
-                // Ctrl+Alt+1
+            bindings =
                 <&macro_press>,
                 <&kp LCTRL &kp LALT>,
                 <&macro_tap>,
                 <&kp N1>,
                 <&macro_release>,
-                <&kp LCTRL &kp LALT>,
-                
-                // Активация слоя
-                <&macro_param_1to1>,
+                <&kp LCTRL &kp LALT &macro_param_1to1>,
                 <&macro_press>,
                 <&mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1>,
                 <&macro_release>,
                 <&mo MACRO_PLACEHOLDER>,
-                
-                // Ctrl+Alt+3
                 <&macro_press>,
                 <&kp LCTRL &kp LALT>,
                 <&macro_tap>,
@@ -133,7 +121,7 @@
                 <&macro_release>,
                 <&kp LCTRL &kp LALT>;
 
-                /*
+            /*
                 Hammerspoon script:
                 local previousLayout = nil
 
@@ -203,6 +191,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
@@ -215,6 +204,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
             bindings = <&kp>, <&kp>;
+
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
@@ -284,37 +274,55 @@
 
         base {
             bindings = <
-&kp Q             &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U                 &kp I              &kp O             &kp P
-&hml LCTRL A      &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J           &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL SEMI
-&kp Z             &kp X            &kp C              &kp V        &kp B        &kp N      &kp M                 &kp COMMA          &kp DOT           &kp SQT
-&kp C_VOL_DN      &kp C_VOL_UP     &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt_lang 1 LG(SPACE)  &kp BACKSPACE      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+  &kp Q         &kp W            &kp E              &kp R        &kp T        &kp Y      &kp U                 &kp I              &kp O             &kp P
+  &hml LCTRL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LGUI F  &kp G        &kp H      &hmr LGUI J           &hmr LEFT_SHIFT K  &hmr LEFT_ALT L   &hmr LCTRL SEMI
+  &kp Z         &kp X            &kp C              &kp V        &kp B        &kp N      &kp M                 &kp COMMA          &kp DOT           &kp SQT
+  &kp C_VOL_DN  &kp C_VOL_UP     &kp ESCAPE         &lt 2 TAB    &kp SPACE    &kp ENTER  &lt_lang 1 LG(SPACE)  &kp BACKSPACE      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
 
         sym_num {
             bindings = <
-&kp EQUAL         &kp PIPE             &kp AMPERSAND                &kp DOLLAR            &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8          &kp N9         &kp N0
-&hml LCTRL COLON  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     &kp COMMA     &kp N4  &kp N5          &kp N6         &kp GRAVE
-&kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &kp DOT       &kp N1  &kp N2          &kp N3         &kp SQT
-&kp ASTERISK      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &soft_off     &trans  &kp AT          &kp LESS_THAN  &kp GREATER_THAN
+  &kp EQUAL         &kp PIPE             &kp AMPERSAND                &kp DOLLAR            &kp EXCLAMATION      &kp QUESTION  &kp N7  &kp N8  &kp N9         &kp N0
+  &hml LCTRL COLON  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     &kp COMMA     &kp N4  &kp N5  &kp N6         &kp GRAVE
+  &kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    &kp DOT       &kp N1  &kp N2  &kp N3         &kp SQT
+  &kp ASTERISK      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE       &kp HASH      &trans  &kp AT  &kp LESS_THAN  &kp GREATER_THAN
             >;
         };
 
         nav {
             bindings = <
-&kp LS(LA(LEFT_ARROW))       &kp LS(LA(RIGHT_ARROW))      &kp LA(UP_ARROW)            &kp LA(DOWN_ARROW)         &repeat5_macro    &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))
-&hml LCTRL LG(LEFT_BRACKET)  &hml LALT LG(RIGHT_BRACKET)  &hml LSHIFT LA(LEFT_ARROW)  &hml LGUI LA(RIGHT_ARROW)  &kp LG(LS(N4))    &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)
-&kp C_PP                     &kp LG(GRAVE)                &kp LA(LG(N))               &kp LA(LG(J))              &kp LG(LS(N5))    &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(Z)))
-&bt BT_CLR                   &bt BT_SEL 0                 &studio_unlock              &trans                     &lt 3 SPACE       &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(T))))  &kp LS(LA(LC(LG(R))))
+  &kp LS(LA(LEFT_ARROW))       &kp LS(LA(RIGHT_ARROW))      &kp LA(UP_ARROW)            &kp LA(DOWN_ARROW)         &repeat5_macro    &kp PAGE_UP            &kp HOME               &kp UP                 &kp END                &kp LS(LA(LC(LG(F))))
+  &hml LCTRL LG(LEFT_BRACKET)  &hml LALT LG(RIGHT_BRACKET)  &hml LSHIFT LA(LEFT_ARROW)  &hml LGUI LA(RIGHT_ARROW)  &kp LG(LS(N4))    &kp PG_DN              &kp LEFT               &kp DOWN               &kp RIGHT              &kp LS(F6)
+  &kp C_PP                     &kp LG(GRAVE)                &kp LA(LG(N))               &kp LA(LG(J))              &kp LG(LS(N5))    &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(M))))  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(L))))  &kp LS(LA(LC(Z)))
+  &studio_unlock               &trans                       &tog 4                      &trans                     &tog 3            &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(S))))  &kp LS(LA(LC(LG(T))))  &kp LS(LA(LC(LG(R))))
             >;
         };
 
-        sym_numb {
+        connect {
             bindings = <
-&kp QUESTION  &kp N7     &kp N8          &kp N9        &kp SQT     &kp EQUAL         &kp PIPE             &kp AMPERSAND                &kp DOLLAR            &kp EXCLAMATION      
-&kp COMMA     &kp N4     &kp N5          &kp N6        &kp DOT     &hml LCTRL COLON  &hml LEFT_ALT SLASH  &hml LSHFT LEFT_PARENTHESIS  &hml LGUI LEFT_BRACE  &kp LEFT_BRACKET     
-&kp GRAVE     &kp N1     &kp N2          &kp N3        &kp N0      &kp SEMI          &kp BACKSLASH        &kp RIGHT_PARENTHESIS        &kp RIGHT_BRACE       &kp RIGHT_BRACKET    
-&soft_off     &kp ENTER  &kp AT          &bt BT_SEL 0  &bt BT_CLR  &kp ASTERISK      &kp PLUS             &kp PERCENT                  &kp MINUS             &kp UNDERSCORE      
+  &bt BT_SEL 0  &kp N7     &kp N8  &kp N9  &kp NUMBER_0    &kp EQUAL         &kp F7    &kp F8       &kp F9     &kp F10
+  &bt BT_SEL 1  &kp N4     &kp N5  &kp N6  &kp F2          &hml LCTRL COLON  &kp F4    &kp F5       &kp F6     &kp F11
+  &bt BT_CLR    &kp N1     &kp N2  &kp N3  &kp DELETE      &kp SEMI          &kp F1    &kp F2       &kp F3     &kp F12
+  &soft_off     &kp ENTER  &kp AT  &trans  &tog 0          &kp ASTERISK      &kp PLUS  &kp PERCENT  &kp MINUS  &kp UNDERSCORE
+            >;
+        };
+
+        gaming-1 {
+            bindings = <
+  &kp N1     &kp N2  &kp N3        &kp N4     &kp N5    &kp T  &kp Y  &kp U      &kp I      &kp O
+  &kp TAB    &kp Q   &kp W         &kp E      &kp F     &kp G  &kp H  &kp J      &kp K      &kp L
+  &kp LSHFT  &kp A   &kp S         &kp D      &kp G     &kp B  &kp N  &kp M      &kp Z      &kp P
+  &kp C      &kp V   &lt 5 ESCAPE  &kp SPACE  &kp R     &kp Z  &kp X  &kp ENTER  &kp GRAVE  &tog 0
+            >;
+        };
+
+        gaming-2 {
+            bindings = <
+  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &trans  &trans  &trans  &trans  &trans
+  &kp F1        &kp I         &kp T         &kp C         &kp M           &trans  &trans  &trans  &trans  &trans
+  &kp F3        &kp B         &kp Z         &kp X         &kp V           &trans  &trans  &trans  &trans  &trans
+  &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
